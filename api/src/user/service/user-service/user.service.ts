@@ -85,6 +85,10 @@ export class UserService {
         )
     }
 
+    public getOne(id: number): Promise<UserI> {
+        console.warn(id)
+        return this.userRepository.findOneByOrFail({id});
+    }
 
 
 
